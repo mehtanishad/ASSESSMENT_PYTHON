@@ -94,7 +94,6 @@ def add_club(request):
     return redirect(club_page)
 
 
-
 def profile_page(request):
     print(request.session['email'])
     if 'email' in request.session:
@@ -208,8 +207,6 @@ def profile_update_teacher(request):
     user_profile.save()
     teacher.save()
     return redirect(profile_page)
-
-
 
 
 # logout functionality
@@ -327,13 +324,11 @@ def student_page_data(request):
     # return redirect(student)
 
 
-
 #teacher data
 def teacher_page_data(request):
     print(request.POST)
     teacher = Teacher.objects.all()
     data['teacher'] = teacher
-
 
 
 #club data
